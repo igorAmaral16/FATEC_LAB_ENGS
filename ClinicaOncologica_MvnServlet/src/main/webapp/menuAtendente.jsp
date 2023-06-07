@@ -12,7 +12,7 @@
 	<a class = "back-link" href="index.jsp">SAIR</a>
 
     <ul>
-        <li><a href="cadastrarPaciente.jsp">Cadastrar Paciente</a></li>
+        <li><a class = "menu-link" href="cadastrarPaciente.jsp">Cadastrar Paciente</a></li>
         <li><a href="listarPacientes.jsp">Listar Pacientes</a></li>
         <li><a href="excluirPaciente.jsp">Excluir Paciente</a></li>
     </ul>

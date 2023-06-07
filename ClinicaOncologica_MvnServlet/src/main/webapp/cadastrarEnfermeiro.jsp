@@ -6,27 +6,27 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<a class = "back-link" href="menuRh.jsp">Voltar para o Menu RH</a>
+    <a class = "back-link" href="menuRh.jsp">Voltar para o Menu RH</a>
 
     <h1>Cadastrar Enfermeiro(a)</h1>
     
     <c:if test="${not empty erroCadastro}">
-        <div class="erro">${erroCadastro}</div>
+        <div class="error-message">${erroCadastro}</div>
     </c:if>
 
     <!-- Formulário -->
-	<form method="post" action=cadastrarEnfermeiroServlet>
+    <form method="post" action=cadastrarEnfermeiroServlet>
     <!-- Opções -->
     <label for="action">Ação:</label>
-    <input type="radio" id="cadastrar" name="action" value="cadastrar">
+    <input type="radio" id="cadastrar" name="action" value="cadastrar" required>
     <label for="cadastrar">Cadastrar</label>
-    <input type="radio" id="atualizar" name="action" value="atualizar">
+    <input type="radio" id="atualizar" name="action" value="atualizar" required>
     <label for="atualizar">Atualizar</label>
     <br>
     <br>
     <!-- Campos do formulário -->
     <label>CPF:</label>
-    <input type="number" name="cpf" placeholder="CPF" required>
+    <input type="number" name="cpf" placeholder="CPF" required maxlength="11">
     <br>
     <label>Nome:</label>
     <input type="text" name="nome" placeholder="Nome" required>
@@ -48,36 +48,36 @@
     <br>
     <label>Estado: 
         <select name="estado">
-		    <option value="AC">Acre</option>
-		    <option value="AL">Alagoas</option>
-		    <option value="AP">Amapá</option>
-		    <option value="AM">Amazonas</option>
-		    <option value="BA">Bahia</option>
-		    <option value="CE">Ceará</option>
-		    <option value="DF">Distrito Federal</option>
-		    <option value="ES">Espírito Santo</option>
-		    <option value="GO">Goiás</option>
-		    <option value="MA">Maranhão</option>
-		    <option value="MT">Mato Grosso</option>
-		    <option value="MS">Mato Grosso do Sul</option>
-		    <option value="MG">Minas Gerais</option>
-		    <option value="PA">Pará</option>
-		    <option value="PB">Paraíba</option>
-		    <option value="PR">Paraná</option>
-		    <option value="PE">Pernambuco</option>
-		    <option value="PI">Piauí</option>
-		    <option value="RJ">Rio de Janeiro</option>
-		    <option value="RN">Rio Grande do Norte</option>
-		    <option value="RS">Rio Grande do Sul</option>
-		    <option value="RO">Rondônia</option>
-		    <option value="RR">Roraima</option>
-		    <option value="SC">Santa Catarina</option>
-		    <option value="SP">São Paulo</option>
-		    <option value="SE">Sergipe</option>
-		    <option value="TO">Tocantins</option>
-		</select>
-		</label>
-		<br>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+        </label>
+        <br>
     <label>Bairro:</label>
     <input type="text" name="bairro" placeholder="Bairro" required>
     <br>
@@ -89,10 +89,10 @@
     <br>
     <label>Tipo Usuário: 
         <select name="tipoUsuario">
-		    <option value="ENFERMEIRO">ENFERMEIRO</option>
-		</select>
-		</label>
-		<br>
+            <option value="ENFERMEIRO">ENFERMEIRO</option>
+        </select>
+        </label>
+        <br>
     <label>RG:</label>
     <input type="number" name="rg" placeholder="RG" required>
     <br>

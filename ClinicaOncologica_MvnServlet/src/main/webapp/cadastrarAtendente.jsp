@@ -9,14 +9,14 @@
 <body>
     <a class = "back-link" href="menuRh.jsp" class="back-link">Voltar para o Menu RH</a>
 
-    <h1 class="title">Cadastrar Atendente</h1>
+    <h1>Cadastrar Atendente</h1>
     
     <c:if test="${not empty erroCadastro}">
         <div class="error-message">${erroCadastro}</div>
     </c:if>
 
     <!-- Formulário -->
-    <form class="form-container" method="post" action="cadastrarAtendenteServlet">
+    <form method="post" action="cadastrarAtendenteServlet">
 	    <!-- Opções -->
 	    <label for="action">Ação:</label>
 	    <input type="radio" id="cadastrar" name="action" value="cadastrar">
@@ -27,7 +27,7 @@
 	    <br>
         <!-- Campos do formulário -->
         <label class="form-label">CPF:</label>
-        <input class="form-input" type="number" name="cpf" placeholder="CPF" required>
+        <input class="form-input" type="number" name="cpf" placeholder="CPF" required maxlength="11">
         <br>
         <label class="form-label">Nome:</label>
         <input class="form-input" type="text" name="nome" placeholder="Nome" required>
@@ -39,13 +39,13 @@
         <input class="form-input" type="date" name="nascimento" required>
         <br>
         <label class="form-label">Número:</label>
-        <input class="form-input" type="number" name="numero" required>
+        <input class="form-input" type="number" name="numero" required maxlength="6">
         <br>
         <label class="form-label">Logradouro:</label>
         <input class="form-input" type="text" name="logradouro" placeholder="Logradouro" required>
         <br>
         <label class="form-label">CEP:</label>
-        <input class="form-input" type="number" name="cep" placeholder="CEP" required>
+        <input class="form-input" type="number" name="cep" placeholder="CEP" required maxlength="8">
         <br>
         <label class="form-label">Estado:</label>
         <select class="form-select" name="estado">
@@ -82,10 +82,10 @@
         <input class="form-input" type="text" name="bairro" placeholder="Bairro" required>
         <br>
         <label class="form-label">Login:</label>
-        <input class="form-input" type="text" name="login" placeholder="Login" required>
+        <input class="form-input" type="text" name="login" placeholder="Login" required maxlength="20">
         <br>
         <label class="form-label">Senha:</label>
-        <input class="form-input" type="password" name="senha" placeholder="Senha" required>
+        <input class="form-input" type="password" name="senha" placeholder="Senha" required maxlength="20">
         <br>
         <label class="form-label">Tipo Usuário:</label>
         <select class="form-select" name="tipoUsuario">
@@ -93,7 +93,7 @@
         </select>
         <br>
         <label class="form-label">RG:</label>
-        <input class="form-input" type="number" name="rg" placeholder="RG" required>
+        <input class="form-input" type="number" name="rg" placeholder="RG" required maxlength="13">
         <br>
         <!-- Botão de envio -->
         <button class="form-button" type="submit">Enviar</button>

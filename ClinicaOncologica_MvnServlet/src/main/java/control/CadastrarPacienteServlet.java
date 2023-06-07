@@ -53,7 +53,6 @@ private static final long serialVersionUID = 1L;
             } else {
                 try {
                     pDao.inserirPaciente(paciente);
-                    request.setAttribute("erroCadastro", "Paciente cadastrado com sucesso!");
                 } catch (ClassNotFoundException | SQLException e) {
                     String erro = e.getMessage();
                     request.setAttribute("erroCadastro", erro);

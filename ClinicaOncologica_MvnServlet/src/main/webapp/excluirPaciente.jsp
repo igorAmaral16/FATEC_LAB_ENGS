@@ -18,7 +18,7 @@
     </form>
     
     <h3>Resultado da Exclusão:</h3>
-    <p>${mensagem}</p>
+    <p class = "error-message">${mensagem}</p>
 
 </body>
 </html>

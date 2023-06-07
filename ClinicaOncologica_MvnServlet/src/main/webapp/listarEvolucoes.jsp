@@ -42,7 +42,7 @@
 <c:if test="${not empty erro}">
     <table>
         <tr>
-            <td>${erro}</td>
+            <td class = "error-message">${erro}</td>
         </tr>
     </table>
 </c:if>

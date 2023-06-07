@@ -11,7 +11,7 @@
     <h1>Cadastrar Médico(a)</h1>
     
     <c:if test="${not empty erroCadastro}">
-        <div class="erro">${erroCadastro}</div>
+        <div class="error-message">${erroCadastro}</div>
     </c:if>
 
     <!-- Formulário -->

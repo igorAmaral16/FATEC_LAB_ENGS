@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div>
         <a class = "back-link" href="menuRh.jsp">Voltar para o Menu RH</a>
 
         <h2>Buscar Funcionário</h2>
@@ -20,7 +21,7 @@
         </form>
 
         <c:if test="${not empty funcionarios}">
-            <div class="resultado">
+            <div>
                 <h3>Resultado da Busca:</h3>
                 <table>
                     <tr>
